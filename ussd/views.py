@@ -21,11 +21,11 @@ def ussdApp(request):
         level = text.split('*')
         category = text[:3]
         response =""
-        if  text=='':
-             response ="CON Murakaza neza kuri Idafarm"
-             response +="1. Kwandikisha igihingwa"
-             response +="2. Kumenya ingengabihe"
-             response +="3. Umushahara"
+        if  text =='':
+            response ="CON Murakaza neza kuri Idafarm"
+            response +="1. Kwandikisha igihingwa"
+            response +="2. Kumenya ingengabihe"
+            response +="3. Umushahara"
         elif text == '1':
             response ="CON Hitamo igihingwa"
 
