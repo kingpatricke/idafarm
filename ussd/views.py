@@ -13,7 +13,9 @@ africastalking.initialize(AfricasUsername,api_key)
 
 @csrf_exempt
 def ussdApp(request):
+
     if request.method == 'POST':
+
         session_id = request.POST.get('sessionId')
         service_code = request.POST.get('serviceCode')
         phoneNumber = request.POST.get('phoneNumber')
@@ -21,13 +23,14 @@ def ussdApp(request):
         level = text.split('*')
         category = text[:3]
         response =""
-        if  text =='':
-            response ="CON Murakaza neza kuri Idafarm"
-            response +="1. Kwandikisha igihingwa"
-            response +="2. Kumenya ingengabihe"
+        if text =='':
+            response = "CON Murakaza neza kuri Idafarm \n"
+            response +="1. Kwandikisha igihingwa \n"
+            response +="2. Kumenya ingengabihe \n"
             response +="3. Umushahara"
         elif text == '1':
-            response ="CON Hitamo igihingwa"
+
+            response ="CON Hitamo igihingwa \n"
 
         else:
             response = "END Ukanze ibitaribyo, ongera mukanya"
