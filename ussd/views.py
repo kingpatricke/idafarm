@@ -40,6 +40,8 @@ def ussdApp(request):
             response = "CON Uwo mubufatanyije \n"
         elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
             response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
+        elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
+            response = "END Murakoze kwiyandikisha kuri Ida farm \n"
 
 
         elif text == '1*2':
