@@ -36,10 +36,17 @@ def ussdApp(request):
         elif text == '1*1':
             product="Ibinyomoro"
             response = "CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
+        elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
+            response = "CON Uwo mubufatanyije \n"
+        elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
+            response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
+
 
         elif text == '1*2':
             product ="Indimu"
             response ="CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
+        elif category =='1*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
+            response = "CON Uwo mubufatanyije \n"
          
         #  ======================== INGENGABIHE==================
         elif text == '2':
