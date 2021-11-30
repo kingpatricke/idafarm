@@ -23,17 +23,30 @@ def ussdApp(request):
         level = text.split('*')
         category = text[:3]
         response =""
+        #  main menu for our application
         if text == '':
             response =  "CON Murakaza neza kuri Idafarm \n"
             response += "1. Kwandikisha igihingwa \n"
             response += "2. Kumenya ingengabihe \n"
-            response += "3. Umushahara"
         elif text == '1':
 
             response = "CON Hitamo igihingwa \n"
-            response += "00. SUbira inyuma \n"
-        elif text == '1*00':
-                text = level-1   
+            response += "1. Ibinyomoro \n"
+            response += "2. Indimu"
+        elif text == '1*1':
+            product="Ibinyomoro"
+            response = "CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
+
+        elif text == '1*2':
+            product ="Indimu"
+            response ="CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
+         
+        #  ======================== INGENGABIHE==================
+        elif text == '2':
+            response = "CON Hitamo igihe \n "
+            response += "1. Rimwe mukwezi \n"
+            response += "2. Kabiri Mukwezi"
+
 
         else:
             response = "END Ukanze ibitaribyo, ongera mukanya"
