@@ -19,18 +19,18 @@ def ussdApp(request):
         session_id = request.POST.get("sessionId")
         service_code = request.POST.get("serviceCode")
         phone_number =request.POST.get("phoneNumber")
-        text = request.POST.get("text")
+        text = request.POST['text']
         level = text.split('*')
         category = text[:3]
         response =""
-        if text =='':
-            response = "CON Murakaza neza kuri Idafarm \n"
-            response +="1. Kwandikisha igihingwa \n"
-            response +="2. Kumenya ingengabihe \n"
-            response +="3. Umushahara"
+        if text == '':
+            response =  "CON Murakaza neza kuri Idafarm \n"
+            response += "1. Kwandikisha igihingwa \n"
+            response += "2. Kumenya ingengabihe \n"
+            response += "3. Umushahara"
         elif text == '1':
 
-            response ="CON Hitamo igihingwa \n"
+            response = "CON Hitamo igihingwa \n"
 
         else:
             response = "END Ukanze ibitaribyo, ongera mukanya"
