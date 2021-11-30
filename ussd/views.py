@@ -49,13 +49,23 @@ def ussdApp(request):
             response ="CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
         elif category =='1*2' and int(len(level)) == 3 and str(level[2]) in  str(level):
             response = "CON Uwo mubufatanyije \n"
+        elif category =='1*2' and int(len(level)) == 4 and str(level[3]) in  str(level):
+            response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
+        elif category =='1*2' and int(len(level)) == 5 and str(level[4]) in  str(level):
+            response = "END Murakoze kwiyandikisha kuri Ida farm \n"
          
         #  ======================== INGENGABIHE==================
         elif text == '2':
             response = "CON Hitamo igihe \n "
             response += "1. Rimwe mukwezi \n"
-            response += "2. Kabiri Mukwezi"
-
+            response += "2. Kabiri Mukwezi \n"
+            response += "3. Buri gihe"
+        elif text == '2*1':
+            response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe rimwe mukwezi"
+        elif text == '2*2':
+            response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe kabiri mukwezi"
+        elif text == '2*3':
+            response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe Buri munsi"
 
         else:
             response = "END Ukanze ibitaribyo, ongera mukanya"
