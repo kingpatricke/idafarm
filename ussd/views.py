@@ -34,6 +34,5 @@ def ussdApp(request):
 
         else:
             response = "END Ukanze ibitaribyo, ongera mukanya"
-
-
-    return HttpResponse('we are on ussd app')
+    else:
+        return HttpResponse('we are on ussd app')
