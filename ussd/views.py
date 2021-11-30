@@ -31,6 +31,9 @@ def ussdApp(request):
         elif text == '1':
 
             response = "CON Hitamo igihingwa \n"
+            response += "00. SUbira inyuma \n"
+            if text == '1*00':
+                text = level-1
 
         else:
             response = "END Ukanze ibitaribyo, ongera mukanya"
