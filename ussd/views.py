@@ -7,8 +7,8 @@ def  welcome(request):
     return render(request, 'index.html')
 
 #  python3 -m pip install africastalking
-AfricasUsername='tuganimana01@gmail.com'
-api_key ='1526a36fc4c257d18d07bcfd53b0d18324ce969a5cd6981a35abfa6028b259ac'
+AfricasUsername='kingpatrick250@gmail.com'
+api_key ='5cf7044ca84b41d4a8db500c2ec647b618819150a012eb4081c3cd19921ea9ad'
 africastalking.initialize(AfricasUsername,api_key)
 
 @csrf_exempt
@@ -25,7 +25,7 @@ def ussdApp(request):
         response =""
         #  main menu for our application
         if text == '':
-            response =  "CON Murakaza neza kuri Idafarm \n"
+            response =  "CON Murakaza neza kuri Irrigation System \n"
             response += "1. Kwandikisha igihingwa \n"
             response += "2. Kumenya ingengabihe \n"
         elif text == '1':
