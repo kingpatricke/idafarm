@@ -30,11 +30,11 @@ def ussdApp(request):
             response += "1. Ikinyarwanda \n"
             response += "2. English \n"
 
-        elif text == '1':
-            response = "CON Murakaza neza"
-            response += "1. Amakuru kubijyanye no kuhira"
-            response += "2. ibikoresho bikoreshwa mu kuhira"
-            response += "3. Kwiyandikisha"
+        elif text == '1*1':
+            response = "CON Murakaza neza \n"
+            response += "1. Amakuru kubijyanye no kuhira \n"
+            response += "2. ibikoresho bikoreshwa mu kuhira \n"
+            response += "3. Kwiyandikisha \n"
             
 
         elif text == '1':
@@ -42,7 +42,7 @@ def ussdApp(request):
             response = "CON Hitamo igihingwa \n"
             response += "1. Ibinyomoro \n"
             response += "2. Indimu"
-        elif text == '1*1':
+        elif text == '1*1*1':
             product="Ibinyomoro"
             response = "CON shyiramo ubuso bw'ubutaka bwawe bw' "+str(product)+"\n"
         elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
