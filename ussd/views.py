@@ -26,7 +26,7 @@ def ussdApp(request):
         #  main menu for our application
         if text == '':
             response =  "CON Murakaza neza kuri IDA Smart Irrigation System \n"
-            response = 'Hitamo ururimi ukoresha'
+            response = "CON Hitamo ururimi ukoresha"
             response += "1. Ikinyarwanda \n"
             response += "2. English \n"
 
@@ -35,7 +35,7 @@ def ussdApp(request):
             response += "1. Amakuru kubijyanye no kuhira"
             response += "2. ibikoresho bikoreshwa mu kuhira"
             response += "3. Kwiyandikisha"
-            response += "4."
+            
 
         elif text == '1':
 
