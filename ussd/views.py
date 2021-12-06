@@ -30,14 +30,14 @@ def ussdApp(request):
             response += "1. Ikinyarwanda \n"
             response += "2. English \n"
 
-        elif text == '1*1':
+        elif text == '1':
             response = "CON Murakaza neza \n"
             response += "1. Amakuru kubijyanye no kuhira \n"
             response += "2. ibikoresho bikoreshwa mu kuhira \n"
             response += "3. Kwiyandikisha \n"
             
 
-        elif text == '1':
+        elif text == '1*1':
 
             response = "CON Hitamo igihingwa \n"
             response += "1. Ibinyomoro \n"
