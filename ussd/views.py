@@ -2,7 +2,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 import africastalking
 from django.views.decorators.csrf import csrf_exempt
-from .models import Productsmodels
+from .models import *
 # Create your views here.
 def  welcome(request):
     return render(request, 'index.html')
@@ -39,10 +39,10 @@ def ussdApp(request):
             
 
         elif text == '1*1':
-            products = Productsmodels.objects.all()
+            fetchProducts = Productsmodels.objects.all()
             response = "CON Hitamo igihingwa \n"
-            for product in products:
-                response += ""+str(product.id)+". "+str(product.title)+"\n"
+            for products in fetchProducts:
+                response += ""+str(products.id)+"."+str(products.title)+"\n"
 
       
         elif text == '1*1*1':
